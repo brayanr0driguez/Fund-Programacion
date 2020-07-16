@@ -28,7 +28,7 @@ namespace ej_5
                 Console.WriteLine("usted tiene sobrepeso!");
             }
             else {
-                Console.WriteLine("usted tiene obsidad!!");
+                Console.WriteLine("usted tiene obesidad!!");
             }
         }
     }
