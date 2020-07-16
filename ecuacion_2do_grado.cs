@@ -15,13 +15,13 @@ namespace ej_6
 
             if (discrm == 0)
             {
-                double rspUnica = -1 * b / 2 * a;
+                double rspUnica = (-1 * b) / (2 * a);
                 Console.WriteLine("x: " + rspUnica);
             }
             else if (discrm > 0)
             {
-                double x1 = ((-1 * b) + Math.Sqrt((b * b) - 4 * a * c)) / 2 * a;
-                double x2 = ((-1 * b) - Math.Sqrt((b * b) - 4 * a * c)) / 2 * a;
+                double x1 = ((-1 * b) + Math.Sqrt(discrm)) / (2 * a);
+                double x2 = ((-1 * b) - Math.Sqrt(discrm)) / (2 * a);
 
                 Console.WriteLine("x1: " + x1);
                 Console.WriteLine("x2: " + x2);
