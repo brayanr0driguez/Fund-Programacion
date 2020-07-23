@@ -49,10 +49,10 @@ namespace ej_9_eval
                 switch(riesgo)
                 {
                     case (1): riesgo = 0.00522; break;
-                    case (2): riesgo = 0.00522; break;
-                    case (3): riesgo = 0.00522; break;
-                    case (4): riesgo = 0.00522; break;
-                    case (5): riesgo = 0.00522; break;
+                    case (2): riesgo = 0.01044; break;
+                    case (3): riesgo = 0.02436; break;
+                    case (4): riesgo = 0.04350; break;
+                    case (5): riesgo = 0.06960; break;
                     default: Console.WriteLine("número incorrecto"); break; 
                 }
 
