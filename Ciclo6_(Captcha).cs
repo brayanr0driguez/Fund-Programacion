@@ -1,6 +1,6 @@
 using System;
 
-namespace Ciclo6__Captcha_
+namespace Ciclo_6__Captcha_
 {
     class Program
     {
