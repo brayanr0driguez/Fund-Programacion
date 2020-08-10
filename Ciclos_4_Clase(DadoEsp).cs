@@ -7,7 +7,7 @@ namespace Ciclos_4_clase
         static void Main(string[] args)
         {
             Random randm = new Random();
-            int dado = 0, turno = 0, total = 0, vidas = 3, veces1 = 0, veces6 = 2, dadosEspeciales = 2, dadoEsp = 0; 
+            int dado = 0, turno = 0, total = 0, vidas = 1, veces1 = 0, veces6 = 0, dadosEspeciales = 2, dadoEsp = 0; 
             string seguir = "s", usarDado = "n";
             
             while ((total < 100) && (seguir == "s"))
@@ -48,6 +48,7 @@ namespace Ciclos_4_clase
                             Console.WriteLine("Te quedan " + vidas + " vidas!");
                             veces1 = 0;
                             total -= 10;
+                            if (total < 0) total = 0;
                             Console.WriteLine("\nSe te han restado 10 puntos!");
                             Console.WriteLine("Tu nuevo total es: " + total);
                         }
@@ -57,7 +58,7 @@ namespace Ciclos_4_clase
                         veces6 += 1;
                         if (veces6 == 2) {
                             veces6 = 0;
-                            if (vidas > 3) {
+                            if (vidas < 3) {
                                 vidas += 1;
                                 Console.WriteLine("\nTienes 1 vida más!");
                                 Console.WriteLine("Te quedan " + vidas + " vidas!");
@@ -79,3 +80,4 @@ namespace Ciclos_4_clase
         }
     }
 }
+
