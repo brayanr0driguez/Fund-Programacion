@@ -8,15 +8,15 @@ namespace ArregloDatos_2_Blackjack_
             Random random = new Random();
             int carta, total = 0, j;
             string seguir = "s";
-            string[] name = { "", "", "", "", "" };
-            int[] puntaje = { 0, 0, 0, 0, 0 };
             Console.WriteLine("Ingrese número de jugadores: (2 a 5)");
             j = int.Parse(Console.ReadLine());
             //VALIDACION
             while (j < 2 || 5 < j){
                 Console.WriteLine("Número de jugadores incorrecto, intente de nuevo: ");
                 j = int.Parse(Console.ReadLine());
-            } 
+            }
+            string[] name = new string[j];
+            int[] puntaje = new int [j];
             //INICIO JUEGO           
             for (int i = 0; i < j; i++) {
                 Console.WriteLine("\nJUGADOR " + (i + 1));
@@ -48,7 +48,7 @@ namespace ArregloDatos_2_Blackjack_
             //ORDENAMIENTO DATOS
             for (int k = 0; k < puntaje.Length; k++) {
                 for (int l = 0; l < puntaje.Length - 1; l++) {
-                    if (puntaje[l] > puntaje[l + 1]) {       
+                    if (puntaje[l] < puntaje[l + 1]) {       
                         int tmp1 = puntaje[l]; 
                         //PUNTAJE
                         puntaje[l] = puntaje[l + 1];
@@ -61,18 +61,17 @@ namespace ArregloDatos_2_Blackjack_
                 }
             } 
             //SE TOMAN LOS ULTIMOS DOS VALORES DEL ARREGLO YA QUE SIEMPRE SERAN LOS MAYORES
-            Console.WriteLine("\nEL PRIMER LUGAR ES {0} CON {1} PUNTOS!!", name[4], puntaje[4]);
-            Console.WriteLine("\nEL SEGUNDO LUGAR ES {0} CON {1} PUNTOS!", name[3], puntaje[3]);
+            Console.WriteLine("\nEL PRIMER LUGAR ES {0} CON {1} PUNTOS!!", name[0], puntaje[0]);
+            Console.WriteLine("\nEL SEGUNDO LUGAR ES {0} CON {1} PUNTOS!", name[1], puntaje[1]);
             Console.WriteLine("\nGRACIAS POR JUGAR!");
 
             //SI SE QUIERE UNA TABLA DE TODOS
             Console.WriteLine("");
             Console.WriteLine("PUNTAJES!");
-            Array.Reverse(puntaje);
-            Array.Reverse(name);
             for (int m = 0; m < j; m++) {
                 Console.WriteLine("{0}: {1}", name[m], puntaje[m]);
             }
         }
     }
 }
+
